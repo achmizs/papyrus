@@ -80,6 +80,7 @@ body {
 	font-family: Verdana, Arial, sans-serif;
 	background-color: Beige;
 	background-image: url('papyrus.jpg');
+	tab-size: 4;
 }
 
 #main,
