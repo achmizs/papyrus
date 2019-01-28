@@ -334,15 +334,16 @@ body {
 #wikiedit textarea {
 	font-size: inherit;
 	width: 100%;
-}
-#wikiedit .edit-summary input[type='text'] {
-	width: 100%;
+	min-height: calc(100vh - 360px);
 }
 
 #wikiedit input[type='text'],
 #wikiedit input[type='submit'] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
+}
+#wikiedit .edit-summary input[type='text'] {
+	width: 100%;
 }
 
 .preview-warning {
