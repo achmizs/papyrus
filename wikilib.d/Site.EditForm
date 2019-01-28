@@ -1,0 +1,50 @@
+version=pmwiki-2.2.109 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+author=Said Achmiz
+charset=UTF-8
+csum=
+host=69.121.172.156
+name=Site.EditForm
+rev=182
+targets=Site.EditForm
+text=(:stylepage:)%0a(:Summary:contains the edit page layout form:)%0a(:messages:)%0a%0a(:if e_preview:)%0a%25block preview-warning%25 This is only a preview; your changes have not yet been saved!%25%25 [[#wikiedit | → Go to editing area]]%0a%0a%25block preview-begin%25 Begin Preview%0a(:e_preview:)%0a%25block preview-end%25 End Preview%0a(:ifend:)%0a%0a>>id='wikiedit'%3c%3c%0a(:input e_form:) %25guibuttons%25 (:e_guibuttons:) %25%25 (:input e_textarea focus=1:)%0a%0a%25block edit-summary%25 $[Edit Summary [-(Briefly describe your changes)-]]\\%0a(:input e_changesummary:)%0a%0a%25block author-minor%25 $[Author]: (:input e_author:) (:input e_minorcheckbox:) $[This is a minor change]%0a%0a%25block edit-action-buttons%25 (:input e_savebutton:) (:input e_savedraftbutton:) (:input e_saveeditbutton:) (:input e_previewbutton:) (:input e_cancelbutton:)%0a(:input end:)%0a>>%3c%3c%0a%0a(:if e_preview:)%0a%25block back-to-top%25 [[{$FullName}?action=edit#top | '''&#9650; Back to top &#9650;''']]%0a(:ifend:)%0a%0a(:include $[{$SiteGroup}/EditQuickReference]:)
+time=1548714563
+author:1548714563=Said Achmiz
+diff:1548714563:1548714134:=8a9%0a> ----%0a9a11%0a> ----%0a
+host:1548714563=69.121.172.156
+author:1548714134=achmizs
+diff:1548714134:1548714027:=6,8c6,7%0a%3c %25block preview-warning%25 This is only a preview; your changes have not yet been saved!%25%25 [[#wikiedit | → Go to editing area]]%0a%3c %0a%3c %25block preview-begin%25 Begin Preview%0a---%0a> !! $[Preview]%0a> %25block preview-warning%25 %25font-weight=bold color=#c00%25This is only a preview; your changes have not yet been saved!%25%25 [[#wikiedit | → Go to editing area]]%0a11a11%0a> %0a
+host:1548714134=69.121.172.156
+author:1548714027=achmizs
+diff:1548714027:1548712600:=11,12d10%0a%3c %0a%3c %25block preview-end%25 End Preview%0a
+host:1548714027=69.121.172.156
+author:1548712600=achmizs
+diff:1548712600:1548712527:=10d9%0a%3c ----%0a
+host:1548712600=69.121.172.156
+author:1548712527=achmizs
+diff:1548712527:1548712433:=15,20c15,19%0a%3c %25block edit-summary%25 $[Edit Summary [-(Briefly describe your changes)-]]\\%0a%3c (:input e_changesummary:)%0a%3c %0a%3c %25block author-minor%25 $[Author]: (:input e_author:) (:input e_minorcheckbox:) $[This is a minor change]%0a%3c %0a%3c %25block edit-action-buttons%25 (:input e_savebutton:) (:input e_savedraftbutton:) (:input e_saveeditbutton:) (:input e_previewbutton:) (:input e_cancelbutton:)%0a---%0a> %25block wikiedit-meta%25 $[Edit Summary [-(Briefly describe your changes)-]]\\%0a> (:input e_changesummary:)\\%0a> $[Author]: (:input e_author:) (:input e_minorcheckbox:) $[This is a minor change]%0a> %0a> %25block buttons%25 (:input e_savebutton:) (:input e_savedraftbutton:) (:input e_saveeditbutton:) (:input e_previewbutton:) (:input e_cancelbutton:)%0a
+host:1548712527=69.121.172.156
+author:1548712433=achmizs
+diff:1548712433:1548712299:=12,16c12,19%0a%3c >>id='wikiedit'%3c%3c%0a%3c (:input e_form:) %25guibuttons%25 (:e_guibuttons:) %25%25 (:input e_textarea focus=1:)%0a%3c %0a%3c %25block wikiedit-meta%25 $[Edit Summary [-(Briefly describe your changes)-]]\\%0a%3c (:input e_changesummary:)\\%0a---%0a> >>wikiedit%3c%3c%0a> (:input e_form:)%0a> %0a> %25guibuttons%25 (:e_guibuttons:)  %25%25 (:input e_textarea focus=1:)%0a> %0a> $[Edit Summary [-(Briefly describe your changes)-]]\\%0a> (:input e_changesummary:)%0a> %0a
+host:1548712433=69.121.172.156
+author:1548712299=achmizs
+diff:1548712299:1548712111:=15,18c15,19%0a%3c %25guibuttons%25 (:e_guibuttons:)  %25%25 (:input e_textarea focus=1:)%0a%3c %0a%3c $[Edit Summary [-(Briefly describe your changes)-]]\\%0a%3c (:input e_changesummary:)%0a---%0a> %25block guibuttons%25 (:e_guibuttons:) %0a> %0a> (:input e_textarea focus=1:)%0a> %0a> $[Edit Summary [-(Briefly describe your changes)-]](:input e_changesummary:)%0a
+host:1548712299=69.121.172.156
+author:1548712111=achmizs
+diff:1548712111:1515704581:=0a1%0a> (:external-resource stylesheet "https://fonts.obormot.net/?fonts=Century731,Inconsolata,OpenSans,TriplicateCode&base64encode=1" :)%0a4d4%0a%3c %0a11,22c11,19%0a%3c %0a%3c >>wikiedit%3c%3c%0a%3c (:input e_form:)%0a%3c %0a%3c %25block guibuttons%25 (:e_guibuttons:) %0a%3c %0a%3c (:input e_textarea focus=1:)%0a%3c %0a%3c $[Edit Summary [-(Briefly describe your changes)-]](:input e_changesummary:)%0a%3c %0a%3c $[Author]: (:input e_author:) (:input e_minorcheckbox:) $[This is a minor change]%0a%3c %0a---%0a> (:div id='wikiedit':)%0a> (:input e_form:)%25guibuttons%25(:e_guibuttons:)%25%25(:input e_textarea focus=1:)%0a> %0a> $[Edit Summary [-(Briefly describe your changes)-]]%0a> %0a> (:input e_changesummary:)%0a> %0a> $[Author]: (:input e_author:) (:input e_minorcheckbox:) (:input checkbox converthtml id="converthtml" label="Enable HTML conversion" :)%0a> %0a25,26c22,23%0a%3c >>%3c%3c%0a%3c %0a---%0a> (:divend:)%0a> %0a28c25%0a%3c %25block back-to-top%25 [[{$FullName}?action=edit#top | '''&#9650; Back to top &#9650;''']]%0a---%0a> &#x200A;[[{$FullName}?action=edit#top | '''&#9650; Back to top &#9650;''']]%0a
+host:1548712111=69.121.172.156
+author:1515704581=achmizs
+diff:1515704581:1515289134:=1d0%0a%3c (:external-resource stylesheet "https://fonts.obormot.net/?fonts=Century731,Inconsolata,OpenSans,TriplicateCode&base64encode=1" :)%0a
+host:1515704581=68.194.251.71
+author:1515289134=achmizs
+diff:1515289134:1513578378:=6c6%0a%3c %25block preview-warning%25 %25font-weight=bold color=#c00%25This is only a preview; your changes have not yet been saved!%25%25 [[#wikiedit | → Go to editing area]]%0a---%0a> %25block preview-warning%25 %25font-weight=bold color=#c00%25This is only a preview; your changes have not yet been saved!%25%25 [[#editing_area | → Go to editing area]]%0a10c10%0a%3c (:div id='wikiedit':)%0a---%0a> (:div id='wikiedit':)[[#editing_area]]%0a
+host:1515289134=68.194.251.71
+author:1513578378=achmizs
+diff:1513578378:1513578275:=17c17%0a%3c $[Author]: (:input e_author:) (:input e_minorcheckbox:) (:input checkbox converthtml id="converthtml" label="Enable HTML conversion" :)%0a---%0a> $[Author]: (:input e_author:) (:input e_minorcheckbox:) (:input checkbox converthtml label="Enable HTML conversion" :)%0a
+host:1513578378=68.194.251.71
+author:1513578275=achmizs
+diff:1513578275:1512367838:=17c17%0a%3c $[Author]: (:input e_author:) (:input e_minorcheckbox:) (:input checkbox converthtml label="Enable HTML conversion" :)%0a---%0a> $[Author]: (:input e_author:) (:input e_minorcheckbox:)%0a
+host:1513578275=68.194.251.71
+author:1512367838=achmizs
+diff:1512367838:1512367813:=1d0%0a%3c (:stylepage:)%0a
+host:1512367838=68.194.251.71
