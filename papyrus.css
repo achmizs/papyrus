@@ -99,6 +99,7 @@ body {
 	padding: var(--papyrus-content-padding);
 	display: flex;
 	flex-flow: column;
+	min-width: 0;
 }
 
 /*======================*/
@@ -164,6 +165,7 @@ body {
 
 #wikitext {
 	line-height: 1.5;
+	hyphens: auto;
 }
 
 #wikitext p {
@@ -407,6 +409,10 @@ a {
 	text-decoration: none;
 	font-weight: normal;
 	color: #a74000;
+}
+#wikitext a {
+	overflow-wrap: break-word;
+	word-break: break-all;
 }
 
 a:visited {
