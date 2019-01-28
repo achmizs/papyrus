@@ -17,9 +17,9 @@
 	* ReadMe.txt (instructions & info)
 	*/
 
-/***********/
-/* GENERAL */
-/***********/
+/*************/
+/* VARIABLES */
+/*************/
 
 :root {
 	--papyrus-sidebar-width: 200px;
@@ -27,6 +27,10 @@
 	--papyrus-content-padding: 20px;
 	--papyrus-page-header-height: 50px;
 }
+
+/***********/
+/* GENERAL */
+/***********/
 
 html {
 	font-size: 16px;
@@ -37,15 +41,9 @@ html {
 	box-sizing: inherit;
 }
 
-#main,
-#sidebar,
-#header {
-	font-size: 0.75rem;
-}
-
-/**********/
-/* LAYOUT */
-/**********/
+/*==========*/
+/*= Layout =*/
+/*==========*/
 
 body {
 	margin: 0;
@@ -57,10 +55,6 @@ body {
 	grid-template-areas:
 		"header header"
 		"main sidebar";
-
-	font-family: Verdana, Arial, sans-serif;
-	background-color: Beige;
-	background-image: url('papyrus.jpg');
 }
 
 @media only screen and (max-width: 900px) {
@@ -78,9 +72,25 @@ body {
 	}
 }
 
-/*================*/
-/*= Main content =*/
-/*================*/
+/*===========*/
+/*= Styling =*/
+/*===========*/
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	background-color: Beige;
+	background-image: url('papyrus.jpg');
+}
+
+#main,
+#sidebar,
+#header {
+	font-size: 0.75rem;
+}
+
+/****************/
+/* MAIN CONTENT */
+/****************/
 
 #main {
 	grid-area: main;
@@ -90,7 +100,9 @@ body {
 	flex-flow: column;
 }
 
+/*======================*/
 /*= Page title & group =*/
+/*======================*/
 
 #pageTitle {
 	overflow: auto;
@@ -103,7 +115,9 @@ body {
 	font-weight: bold;
 }
 
+/*===============*/
 /*= Page footer =*/
+/*===============*/
 
 #footer {
 	margin: 30px 0 0 0;
@@ -143,7 +157,9 @@ body {
 	}
 }
 
+/*==================*/
 /*= Wiki page text =*/
+/*==================*/
 
 #wikitext {
 	line-height: 1.5;
@@ -153,9 +169,9 @@ body {
 	margin: 1em 0;
 }
 
-/*==========*/
-/*= Header =*/
-/*==========*/
+/**********/
+/* HEADER */
+/**********/
 
 #header {
 	grid-area: header;
@@ -163,7 +179,9 @@ body {
 	display: flex;
 }
 
+/*=============*/
 /*= Page logo =*/
+/*=============*/
 
 #pageLogo {
 	padding: 10px;
@@ -173,7 +191,9 @@ body {
 	max-height: 100%;
 }
 
+/*================*/
 /*= Page actions =*/
+/*================*/
 
 #pageActions {
 	padding: 5px 10px 0 0;
@@ -214,9 +234,9 @@ body {
 	}
 }
 
-/*===========*/
-/*= Sidebar =*/
-/*===========*/
+/***********/
+/* SIDEBAR */
+/***********/
 
 #sidebar {
 	grid-area: sidebar;
@@ -269,7 +289,9 @@ body {
 	}
 }
 
+/*======================*/
 /*= Sidebar search box =*/
+/*======================*/
 
 #sideSearch {
 	margin: 20px 0 0 0;
@@ -326,7 +348,9 @@ body {
 	-moz-appearance: none;
 }
 
+/*===================*/
 /*= GUIEdit buttons =*/
+/*===================*/
 
 @media only screen and (max-width: 900px) {
 	#wikiedit .guibuttons {
