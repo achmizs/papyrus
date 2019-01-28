@@ -1,0 +1,442 @@
+/*	PAPYRUS skin for PmWiki
+	Copyright 2019 Said Achmiz
+
+	Version:    2019-01-28
+
+	More info at these URLs:
+	
+	* https://www.pmwiki.org/wiki/Skins/Papyrus
+	* https://www.pmwiki.org/wiki/Profiles/SaidAchmiz
+
+	The Papyrus skin includes:
+
+	* papyrus.css (this file)
+	* papyrus.jpg (background pattern)
+	* papyrus.tmpl (skin template)
+	* papyrus.php (skin script file)
+	* ReadMe.txt (instructions & info)
+	*/
+
+/***********/
+/* GENERAL */
+/***********/
+
+:root {
+	--papyrus-sidebar-width: 200px;
+	--papyrus-sidebar-padding: 10px;
+	--papyrus-content-padding: 20px;
+	--papyrus-page-header-height: 50px;
+}
+
+html {
+	font-size: 16px;
+
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+#main,
+#sidebar,
+#header {
+	font-size: 0.75rem;
+}
+
+/**********/
+/* LAYOUT */
+/**********/
+
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template:
+		var(--papyrus-page-header-height) 1fr /
+		1fr var(--papyrus-sidebar-width);
+	grid-template-areas:
+		"header header"
+		"main sidebar";
+
+	font-family: Verdana, Arial, sans-serif;
+	background-color: Beige;
+	background-image: url('papyrus.jpg');
+}
+
+@media only screen and (max-width: 900px) {
+	:root {
+		--papyrus-content-padding: 10px;
+	}
+	body {
+		grid-template:
+			auto 1fr auto /
+			100%;
+		grid-template-areas:
+			"header"
+			"main"
+			"sidebar";
+	}
+}
+
+/*================*/
+/*= Main content =*/
+/*================*/
+
+#main {
+	grid-area: main;
+
+	padding: var(--papyrus-content-padding);
+	display: flex;
+	flex-flow: column;
+}
+
+/*= Page title & group =*/
+
+#pageTitle {
+	overflow: auto;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+#pageTitle a {
+	font-weight: bold;
+}
+
+/*= Page footer =*/
+
+#footer {
+	margin: 30px 0 0 0;
+	border-color: #ccc;
+	border-style: dotted;
+	border-width: 1px 0 0 0;
+	padding: 1px 12px 0 0;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#footer .page-actions {
+	margin: 0 12px 0 1px;
+}
+
+@media only screen and (max-width: 900px) {
+	#footer {
+		border-width: 1px 0;
+		padding: 2px 0;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 0.875rem;
+	}
+	#footer .page-actions {
+		text-align: center;
+		margin: 2px;
+	}
+	#footer a {
+		display: inline-block;
+		padding: 5px 3px;
+	}
+	#footer a::before {
+		content: "[ ";
+	}
+	#footer a::after {
+		content: " ]";
+	}
+}
+
+/*= Wiki page text =*/
+
+#wikitext {
+	line-height: 1.5;
+}
+
+#wikitext p {
+	margin: 1em 0;
+}
+
+/*==========*/
+/*= Header =*/
+/*==========*/
+
+#header {
+	grid-area: header;
+
+	display: flex;
+}
+
+/*= Page logo =*/
+
+#pageLogo {
+	padding: 10px;
+}
+#pageLogo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*= Page actions =*/
+
+#pageActions {
+	padding: 5px 10px 0 0;
+	flex: 1 1 auto;
+}
+#pageActions ul {
+	display: flex;
+	list-style-type: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+	justify-content: flex-end;
+}
+#pageActions li {
+	margin: 0 0 0 10px;
+}
+
+@media only screen and (max-width: 900px) {
+	#header {
+		border-bottom: 1px solid #ccc;
+		flex-flow: row wrap;
+	}
+	#pageLogo {
+		flex-basis: calc(var(--papyrus-page-header-height) + var(--papyrus-sidebar-width) + 10px);
+		height: var(--papyrus-page-header-height);
+	}
+	#pageActions {
+		align-self: center;
+		padding: 10px;
+	}
+	#pageActions li {
+		margin: 2px;
+	}
+	#pageActions a {
+		display: inline-block;
+		border: 1px solid #ccc;
+		padding: 3px 6px;
+	}
+}
+
+/*===========*/
+/*= Sidebar =*/
+/*===========*/
+
+#sidebar {
+	grid-area: sidebar;
+
+	padding: var(--papyrus-sidebar-padding);
+	line-height: 1.5;
+}
+
+.sidehead,
+.sidehead a {
+	font-weight: bold;
+}
+
+#sidebar p {
+	margin: 20px 2px 2px 2px;
+	font-size: 1.1em;
+}
+#sidebar ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+#sidebar li {
+	padding-left: 6px;
+}
+
+@media only screen and (max-width: 900px) {
+	#sidebar ul {
+		font-size: 0.875rem;
+		line-height: 1.8;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	#sidebar li {
+		flex: 1 1 auto;
+		text-align: center;
+		padding: 0;
+	}
+	#sidebar li a {
+		display: block;
+		background-color: #c3571b;
+		color: Beige;
+		padding: 5px 8px;
+		margin: 3px;
+	}
+	#sidebar ul li:only-child a {
+		max-width: 50%;
+		margin: 3px auto;
+	}
+}
+
+/*= Sidebar search box =*/
+
+#sideSearch {
+	margin: 20px 0 0 0;
+	display: flex;
+	align-items: stretch;
+}
+#sideSearch .searchbox {
+	flex: 1 1 auto;
+}
+#sideSearch .searchbutton {
+	color: transparent;
+	width: 2.5em;
+	padding: 0;
+	margin: 0 0 0 2px;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAAAAAC4QtCeAAAAAnRSTlMA/1uRIrUAAABpSURBVHgBY/j//+7c2tq5d/8DAcP//TlgsB/EuZuXv+fjxz35efeBnElgMaD8FCCnLOcLiPMlpwyZU4yiDGLAwU+fDoIMQBidswvIAVlaXT23GsgDciDgfSeQB+P8/zkzZxWc8//vtc8AJiB5qbEm4UgAAAAASUVORK5CYII=');
+	background-position: center center;
+	background-repeat: no-repeat;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+	#sideSearch {
+		position: absolute;
+		top: 0;
+		left: var(--papyrus-page-header-height);
+		height: var(--papyrus-page-header-height);
+		padding: calc((var(--papyrus-page-header-height) - 1.5rem) / 2);
+		margin: 0 20px;
+	}
+}
+
+/*************/
+/* EDIT VIEW */
+/*************/
+
+#wikiedit textarea {
+	font-size: inherit;
+	width: 100%;
+}
+#wikiedit textarea + p {
+	margin: 1em 0 0 0;
+}
+#wikiedit textarea + p + p {
+	margin: 0 0 1em 0;
+}
+#wikiedit textarea + p + p input[type='text'] {
+	width: 100%;
+}
+
+#wikiedit input[type='text'],
+#wikiedit input[type='submit'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/*= GUIEdit buttons =*/
+
+@media only screen and (max-width: 900px) {
+	#wikiedit .guibuttons {
+		margin: 0 0 4px 0;
+	}
+	#wikiedit .guibuttons a,
+	#wikiedit .guibuttons > img {
+		margin: 2px;
+		padding: 6px;
+		display: inline-block;
+		vertical-align: text-bottom;
+		border: 1px solid #ddd;
+		background-color: #fff;
+	}	
+	#wikiedit .buttons {
+		display: flex;
+		justify-content: center;
+	}
+	#wikiedit .buttons input {
+		margin: 0 4px;
+	}
+	#wikiedit input {
+		font-size: 1.25rem;
+	}
+}
+
+/**********/
+/* FRAMES */
+/**********/
+
+.frame {
+	border: 1px solid #cccccc;
+	padding: 4px;
+	background-color: #f9f9f9;
+	max-width: 50%;
+}
+
+.lfloat {
+	float: left;
+	margin-right: 0.5em;
+}
+
+.rfloat {
+	float: right;
+	margin-left: 0.5em;
+}
+
+/*********/
+/* LINKS */
+/*********/
+
+a {
+	text-decoration: none;
+	font-weight: normal;
+	color: #a74000;
+}
+
+a:visited {
+	text-decoration: none;
+	font-weight: normal;
+}
+#wikitext a:visited {
+	color: #765193;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #e00004;
+}
+
+a.createlinktext {
+	color: red;
+}
+
+/*********/
+/* LISTS */
+/*********/
+
+ul {
+	list-style-type: square;
+	margin: 0px 0px 10px 10px;
+	padding-left: 10px;
+}
+
+/********/
+/* MISC */
+/********/
+
+hr {
+	height: 0;
+	border-width: 0;
+	border-bottom: 1px solid #aaa;
+}
+
+h2 {
+	font-size: 1.7em;
+	font-weight: normal;
+}
+
+.frame h2 {
+	margin-top: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+input {
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	font-variant: inherit;
+}

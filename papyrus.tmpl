@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" $HTMLTagAttr>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>$WikiTitle | {$Group} / {$Title} $ActionTitle</title>
+	<!--HTMLHeader-->
+</head>
+<body>
+	<div id="main">
+
+		<!--PageTitleFmt-->
+		<div id="pageTitle">
+			<span class='title-group'><a href='{$ScriptUrl}/{$Group}'>{$Group}</a> / </span>{$Title}
+		</div>
+		<!--/PageTitleFmt-->
+
+		<!--PageText-->
+
+		<!--PageFooterFmt-->
+		<div id="footer">
+			<div class='page-actions'>
+				<a rel="nofollow" href="$PageUrl">$[View]</a>&nbsp; 
+				<a rel="nofollow" href='{$PageUrl}?action=edit'>$[Edit]</a>&nbsp; 
+				<a rel="nofollow" href='{$PageUrl}?action=attr'>$[Attributes]</a>&nbsp; 
+				<a rel="nofollow" href='{$PageUrl}?action=diff'>$[History]</a>&nbsp; 
+				<a rel="nofollow" href='{$PageUrl}?action=upload'>$[Attach]</a>&nbsp; 
+				<a rel="nofollow" href='{$PageUrl}?action=print' target='_blank'>$[Print]</a>&nbsp; 
+				<a href='{$ScriptUrl}/$[{$SiteGroup}/Search]'>$[Search]</a>
+			</div>
+			<div class="last-modified">
+				$[Page last modified on {$LastModified}]
+			</div>
+		</div>
+		<!--/PageFooterFmt-->
+
+	</div>
+
+	<!--PageRightFmt-->
+	<div id="sidebar">
+
+		<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+
+		<form id="sideSearch" name='searchform' action='{$ScriptUrl}/$[{$SiteGroup}/Search]'>
+			<input type='hidden' name='pagename' value='$[{$SiteGroup}/Search]'/>
+			<input class='searchbox' type='text' name='q' value=''/>
+			<input class='searchbutton' type='submit' value='$[Search]'/>
+		</form>
+	</div>
+	<!--/PageRightFmt-->
+
+	<!--PageHeaderFmt-->
+	<div id="header">
+		<div id="pageLogo">
+			<a href='{$ScriptUrl}'><img src='$PageLogoUrl' alt='$WikiTitle' title='$WikiTitle' /></a>
+		</div>
+
+		<!--PageActionFmt-->
+		<div id="pageActions">
+			<!--wiki:{$Group}.PageActions {$SiteGroup}.PageActions-->
+		</div>
+		<!--/PageActionFmt-->
+
+	</div>
+	<!--/PageHeaderFmt-->
+
+	<!--HTMLFooter-->
+</body>
+</html>
