@@ -1,5 +1,5 @@
 Name: Papyrus
-Version: 2019-01-28
+Version: 2019-01-28-2
 Description: Skin for PmWiki
 Author: Said Achmiz
 Contact: said@saidachmiz.net
@@ -25,6 +25,9 @@ Installation:
 $Skin = 'papyrus';
 
 Changelog
+
+v. 2019-01-28-2
+ * Various tweaks and bug fixes
 
 v. 2019-01-28
  * Added support for (:notitlegroup:) and (:titlegroup:) directives

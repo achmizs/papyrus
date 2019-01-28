@@ -3,7 +3,7 @@
 /*	PAPYRUS skin for PmWiki
 	Copyright 2019 Said Achmiz
 
-	Version:    2019-01-28
+	Version:    2019-01-28-2
 
 	More info at these URLs:
 	
