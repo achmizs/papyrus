@@ -19,14 +19,17 @@
 	* ReadMe.txt (instructions & info)
 	*/
 
-$filepath = "$SkinDir/papyrus.css";
-$path = "$SkinDirUrl/papyrus.css";
+global $FmtPV;
+$FmtPV['$SkinName'] = '"Papyrus"';
+$FmtPV['$SkinVersion'] = '"2019-01-28-2"';
 
 ## Append the modification time to the URL as a GET parameter; this should be ignored
 ## by the web server, but is seen as part of the unique URL of the remote resource by
 ## the browser; when it changes (because the attachment has been modified), the 
 ## browser will see that it doesn’t have a cached version of the resource under the
 ## new URL, and will retrieve the updated version.
+$filepath = "$SkinDir/papyrus.css";
+$path = "$SkinDirUrl/papyrus.css";
 $versioned_path = $path . "?v=" . filemtime($filepath);
 
 global $VersionedAssetsReattachFileExtension;
