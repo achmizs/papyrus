@@ -32,7 +32,6 @@ v. 2019-01-28
 
 v. 2019-01-27
  * Switched to date-based versioning
- * CSS file is plain CSS now, not .php
  * Unified mobile and desktop style sheets
  * Various improvements to layout, especially mobile
  
