@@ -401,6 +401,47 @@ body {
 	}	
 }
 
+/*========================*/
+/*= Edit quick reference =*/
+/*========================*/
+
+#wikitext .quickref {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 1em 0;
+	color: #444;
+	border-style: solid;
+	border-color: #bbb;
+	border-width: 1px 0;
+	hyphens: none;
+}
+
+#wikitext .quickref p {
+	flex: 1 1 50%;
+	padding: 0.5em 0.25em;
+	margin: 0;
+}
+#wikitext .quickref p:nth-last-of-type(n+2) {
+	border-bottom: 1px solid #ddd;
+}
+#wikitext .quickref p:nth-of-type(2n) {
+	text-align: right;
+}
+
+#wikitext .quickref strong {
+	color: #000;
+}
+#wikitext .quickref code.escaped {
+	font-weight: bold;
+	color: #b00;
+	padding: 0 1px;
+	text-shadow: 0.5px 0.5px 0.5px #f88;
+	font-size: 1.1em;
+}
+#wikitext .quickref code.escaped + code.escaped {
+	margin: 0 0 0 -2px;
+}
+
 /**********/
 /* FRAMES */
 /**********/
