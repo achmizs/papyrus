@@ -335,13 +335,7 @@ body {
 	font-size: inherit;
 	width: 100%;
 }
-#wikiedit textarea + p {
-	margin: 1em 0 0 0;
-}
-#wikiedit textarea + p + p {
-	margin: 0 0 1em 0;
-}
-#wikiedit textarea + p + p input[type='text'] {
+#wikiedit .edit-summary input[type='text'] {
 	width: 100%;
 }
 
@@ -349,6 +343,43 @@ body {
 #wikiedit input[type='submit'] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
+}
+
+.preview-warning {
+	color: #c00;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+#wikitext .preview-begin,
+#wikitext .preview-end {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #c00;
+}
+#wikitext .preview-begin {
+	border-bottom: 2px solid #c00;
+}
+#wikitext .preview-end {
+	border-top: 2px solid #c00;
+}
+
+#wikiedit .edit-action-buttons {
+	display: flex;
+	justify-content: center;
+}
+#wikiedit .edit-action-buttons input {
+	margin: 0 4px;
+}
+
+#wikiedit input {
+	font-size: 1.125rem;
+}
+
+@media only screen and (max-width: 900px) {
+	#wikiedit input {
+		font-size: 1.25rem;
+	}
 }
 
 /*===================*/
@@ -368,16 +399,6 @@ body {
 		border: 1px solid #ddd;
 		background-color: #fff;
 	}	
-	#wikiedit .buttons {
-		display: flex;
-		justify-content: center;
-	}
-	#wikiedit .buttons input {
-		margin: 0 4px;
-	}
-	#wikiedit input {
-		font-size: 1.25rem;
-	}
 }
 
 /**********/
