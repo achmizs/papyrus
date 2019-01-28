@@ -3,7 +3,7 @@
 /*	PAPYRUS skin for PmWiki
 	Copyright 2019 Said Achmiz
 
-	Version:    2019-01-28-2
+	Version:    2019-01-28-3
 
 	More info at these URLs:
 	
@@ -17,11 +17,12 @@
 	* papyrus.jpg (background pattern)
 	* papyrus.tmpl (skin template)
 	* ReadMe.txt (instructions & info)
+	* wikilib.d/ (directory of bundled wikipages)
 	*/
 
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Papyrus"';
-$FmtPV['$SkinVersion'] = '"2019-01-28-2"';
+$FmtPV['$SkinVersion'] = '"2019-01-28-3"';
 
 ## Append the modification time to the URL as a GET parameter; this should be ignored
 ## by the web server, but is seen as part of the unique URL of the remote resource by

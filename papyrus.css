@@ -1,7 +1,7 @@
 /*	PAPYRUS skin for PmWiki
 	Copyright 2019 Said Achmiz
 
-	Version:    2019-01-28-2
+	Version:    2019-01-28-3
 
 	More info at these URLs:
 	
@@ -15,6 +15,7 @@
 	* papyrus.tmpl (skin template)
 	* papyrus.php (skin script file)
 	* ReadMe.txt (instructions & info)
+	* wikilib.d/ (directory of bundled wikipages)
 	*/
 
 /*************/

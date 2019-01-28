@@ -1,17 +1,23 @@
 Name: Papyrus
-Version: 2019-01-28-2
+Version: 2019-01-28-3
 Description: Skin for PmWiki
 Author: Said Achmiz
 Contact: said@saidachmiz.net
 Copyright: Copyright 2019 Said Achmiz
 xhtml validation: Passed (http://validator.w3.org/)
 
+
 Files:
+
 papyrus.tmpl - template file
 papyrus.css - style sheet
 papyrus.php - script file
 papyrus.jpg - papyrus background
 ReadMe.txt - this file
+wikilib.d/ - directory of bundled wikipages
+
+
+License:
 
 This skin is released under the GNU General Public License
 as published by the Free Software Foundation; either version
@@ -19,12 +25,18 @@ as published by the Free Software Foundation; either version
 
 
 Installation:
-1) Un-zip papyrus.zip into your skins directory
+
+1) Unpack papyrus.tar.gz into your skins directory
 2) Enable the papyrus skin in your config.php with:
 
 $Skin = 'papyrus';
 
-Changelog
+
+Changelog:
+
+v. 2019-01-28-3
+ * Added bundled Site.EditForm and Site.EditQuickReference pages
+ * Revamped edit view
 
 v. 2019-01-28-2
  * Various tweaks and bug fixes
