@@ -1,23 +1,8 @@
 <?php if (!defined('PmWiki')) exit();
+/*	Papyrus skin for PmWiki
+	Copyright 2017-2021 Said Achmiz
 
-/*	PAPYRUS skin for PmWiki
-	Copyright 2019 Said Achmiz
-
-	Version:    2019-01-28-3
-
-	More info at these URLs:
-	
-	* https://www.pmwiki.org/wiki/Skins/Papyrus
-	* https://www.pmwiki.org/wiki/Profiles/SaidAchmiz
-
-	The Papyrus skin includes:
-
-	* papyrus.php (skin script file)
-	* papyrus.css (style sheet)
-	* papyrus.jpg (background pattern)
-	* papyrus.tmpl (skin template)
-	* ReadMe.txt (instructions & info)
-	* wikilib.d/ (directory of bundled wikipages)
+	https://www.pmwiki.org/wiki/Skins/Papyrus
 	*/
 
 global $FmtPV;
@@ -70,11 +55,11 @@ global $HTMLFooterFmt, $action;
 $HTMLFooterFmt[] = "<script type='text/javascript'>document.querySelector('body').classList.add('action-{$action}');</script>";
 
 ## Enable the (:notitlegroup:) and (:titlegroup:) directives.
-Markup('notitlegroup', 'directives',  '/\\(:notitlegroup:\\)/i', function ($m) {
+Markup('notitlegroup', 'directives',  '/\(:notitlegroup:\)/i', function ($m) {
 	global $HTMLStylesFmt;
 	$HTMLStylesFmt['papyrus-title-group'] = "#pageTitle .title-group { display: none; }";
 });
-Markup('titlegroup', 'directives',  '/\\(:titlegroup:\\)/i', function ($m) {
+Markup('titlegroup', 'directives',  '/\(:titlegroup:\)/i', function ($m) {
 	global $HTMLStylesFmt;
 	$HTMLStylesFmt['papyrus-title-group'] = "";
 });
