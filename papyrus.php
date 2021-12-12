@@ -7,7 +7,7 @@
 
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Papyrus"';
-$FmtPV['$SkinVersion'] = '"2019-01-28-3"';
+$FmtPV['$SkinVersion'] = '"2021-12-12"';
 
 ## Append the modification time to the URL as a GET parameter; this should be ignored
 ## by the web server, but is seen as part of the unique URL of the remote resource by
