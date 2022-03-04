@@ -517,6 +517,10 @@ pre {
 	white-space: pre-wrap;
 }
 
+code {
+	font-size: inherit;
+}
+
 input {
 	font-size: inherit;
 	font-family: inherit;
