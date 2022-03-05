@@ -527,3 +527,9 @@ input {
 	font-weight: inherit;
 	font-variant: inherit;
 }
+
+/*	PmWiki built-in table of contents.
+ */
+.PmTOCdiv a {
+	line-height: inherit;
+}
