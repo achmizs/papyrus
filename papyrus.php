@@ -1,13 +1,13 @@
 <?php if (!defined('PmWiki')) exit();
 /*	Papyrus skin for PmWiki
-	Copyright 2017-2021 Said Achmiz
+	Copyright 2017-2022 Said Achmiz
 
 	https://www.pmwiki.org/wiki/Skins/Papyrus
 	*/
 
 global $FmtPV;
 $FmtPV['$SkinName'] = '"Papyrus"';
-$FmtPV['$SkinVersion'] = '"2021-12-12"';
+$FmtPV['$SkinVersion'] = '"2021-03-04"';
 
 ## Append the modification time to the URL as a GET parameter; this should be ignored
 ## by the web server, but is seen as part of the unique URL of the remote resource by
